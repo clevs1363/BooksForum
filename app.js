@@ -21,5 +21,5 @@ app.get("/", function(req, res) {
 
 app.listen(8888, function() {
     let ts = new Date();
-    console.log("YelpCamp server has started at " + ts.getHours() + ":" + ts.getMinutes() + ":" + ts.getSeconds());
+    console.log("BooksForums server has started at " + ts.getHours() + ":" + ts.getMinutes() + ":" + ts.getSeconds());
 });
