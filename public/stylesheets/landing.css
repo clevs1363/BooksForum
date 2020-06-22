@@ -9,10 +9,28 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    text-align: center;
+}
+
+nav {
+    text-align: left;
+    margin: 0;
+}
+
+ul#nav {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+}
+
+ul#nav li {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
 }
 
 section#tagline {
-    margin: 15% 0 0;
+    margin: 13% 0 0;
 }
 
 h1#title {
@@ -20,13 +38,14 @@ h1#title {
     font-size: 8em;
     color: white;
     font-weight: 300;
-    opacity: 0;
     text-align: center;
-    -webkit-animation: fadein 1 ease-in 0.5s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 1s ease-in 0.5s; /* Firefox < 16 */
-    -ms-animation: fadein 1s ease-in 0.5s; /* Internet Explorer */
-    -o-animation: fadein 1s ease-in 0.5s; /* Opera < 12.1 */
-    animation: fadein 1s ease-in 0.5s;
+    opacity: 0;
+    margin: 0;
+    -webkit-animation: fadein 1 ease-in 0.25s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s ease-in 0.25s; /* Firefox < 16 */
+    -ms-animation: fadein 1s ease-in 0.25s; /* Internet Explorer */
+    -o-animation: fadein 1s ease-in 0.25s; /* Opera < 12.1 */
+    animation: fadein 1s ease-in 0.25s;
     animation-fill-mode: forwards;
 }
 
@@ -39,6 +58,13 @@ hr#underTitle {
     width: 25%;
     border: 2px solid white;
     margin-top: 0;
+    opacity: 0;
+    -webkit-animation: fadein 1 ease-in 0.75s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s ease-in 0.75s; /* Firefox < 16 */
+    -ms-animation: fadein 1s ease-in 0.75s; /* Internet Explorer */
+    -o-animation: fadein 1s ease-in 0.75s; /* Opera < 12.1 */
+    animation: fadein 1s ease-in 0.75s;
+    animation-fill-mode: forwards;
 }
 
 p {
@@ -47,4 +73,109 @@ p {
     color: white;
     text-align: center;
     font-size: 1.5em;
+    opacity: 0;
+    -webkit-animation: fadein 1s ease-in 0.75s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s ease-in 0.75s; /* Firefox < 16 */
+    -ms-animation: fadein 1s ease-in 0.75s; /* Internet Explorer */
+    -o-animation: fadein 1s ease-in 0.75s; /* Opera < 12.1 */
+    animation: fadein 1s ease-in 0.75s;
+    animation-fill-mode: forwards;
+}
+
+div#socialMedia {
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Icons */
+
+a {
+    color:#fff;
+    border-radius:4px;
+    text-align:center;
+    text-decoration:none;
+    font-family:fontawesome;
+    position: relative;
+    display: inline-block;
+    width:40px;
+    height:28px;
+    padding-top:12px;
+    margin:0 2px;
+    -o-transition:all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    -webkit-font-smoothing: antialiased;
+}
+
+a:hover {
+    background: #86B3D1;
+}
+
+/* pop-up text */
+
+a span {
+    color:#666;
+    position:absolute;
+    font-family: Raleway, sans-serif;
+    bottom:0;
+    left:-25px;
+    right:-25px;
+    padding:5px 7px;
+    z-index:-1;
+    font-size:14px;
+    border-radius:2px;
+    background:#fff;
+    visibility:hidden;
+    opacity:0;
+    -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* pop-up text arrow */
+
+a span:before {
+    content:'';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position:absolute;
+    bottom:-5px;
+    left:40px;
+}
+
+/* text pops up when icon is in hover state */
+
+a:hover span {
+    bottom:50px;
+    visibility:visible;
+    opacity:1;
+}
+
+/* font awesome icons */
+
+a:nth-of-type(1):before {
+    content:'\f09a';
+}
+a:nth-of-type(2):before {
+    content:'\f099';
+}
+a:nth-of-type(3):before {
+    content:'\f0d5';
+}
+a:nth-of-type(4):before {
+    content:'\f113';
+}
+a:nth-of-type(5):before {
+    content:'\f17d';
+}
+a:nth-of-type(6):before {
+    content:'\f1cb';
 }
